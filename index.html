@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ColorizeWW</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark bg-primary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="https://www.instagram.com/faisall.rd/">Colorize We Web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ==================================DONT EDIT===================================================== -->
+    <!-- rotate image -->
+    <div class="rotate">
+      <img class="image" src="img/rotate.png" alt="" />
+    </div>
+    <!-- ================================================================================================ -->
+    <div class="none">
+      <!-- Main pages -->
+      <div id="home" style="height: 20px"></div>
+      <div class="container">
+        <h1 class="judul text-center">
+          <span style="color: rgb(146, 0, 0)">R</span><span style="color: green">G</span><span style="color: rgb(5, 5, 192)">B</span>
+          <span style="color: white; background-color: rgb(0, 119, 255); border-radius: 10px; padding: 10px"> Convert to Color</span>
+        </h1>
+        <div class="row">
+          <div class="col-sm-6">
+            <form>
+              <div class="controls">
+                <h2 class="text-center">Color It!!</h2>
+                Red : <input id="redValEl" type="text" value="0" style="width: 50px" /><br />
+                <input type="range" class="form-range" min="0" max="255" value="0" onchange="document.getElementById('redValEl').value = this.value;convert();" /><br /><br />
+
+                Green : <input id="greenValEl" type="text" value="0" style="width: 50px" /><br />
+                <input type="range" class="form-range" min="0" max="255" value="0" onchange="document.getElementById('greenValEl').value = this.value;convert();" /><br /><br />
+
+                Blue : <input id="blueValEl" type="text" value="0" style="width: 50px" /><br />
+                <input type="range" class="form-range" min="0" max="255" value="0" onchange="document.getElementById('blueValEl').value = this.value;convert();" /><br /><br />
+              </div>
+              <div>Hexa :</div>
+              <input id="hexaValue" type="text" value="#000000" />
+            </form>
+          </div>
+          <div class="col-sm-6">
+            <h2 class="text-center">Result</h2>
+            <div id="rgb" class="img-thumbnail" style="width: 400px; height: 350px"></div>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br />
+      <!-- ========================================================================= -->
+      <!-- tamplate -->
+      <div class="container tamplate">
+        <div class="headerjdul text-center"><h1>Color Tamplate</h1></div>
+        <br /><br />
+        <div class="row text-center">
+          <div class="col-sm">
+            <h5>Antiquewhite</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: antiquewhite"></div>
+            <p>#FAEBD7</p>
+          </div>
+          <div class="col-sm">
+            <h5>Bisque</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #ffe4c4"></div>
+            <p>#FFE4C4</p>
+          </div>
+          <div class="col-sm">
+            <h5>Burly Wood</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #deb887"></div>
+            <p>#DEB887</p>
+          </div>
+          <div class="col-sm">
+            <h5>Coral</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #ff7f50"></div>
+            <p>#FF7F50</p>
+          </div>
+          <div class="col-sm">
+            <h5>Chocolate</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #d2691e"></div>
+            <p>#D2691E</p>
+          </div>
+        </div>
+        <br /><br />
+
+        <div class="row text-center">
+          <div class="col-sm">
+            <h5>Olive</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #808000"></div>
+            <p>#808000</p>
+          </div>
+          <div class="col-sm">
+            <h5>Olive Drab</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #6b8e23"></div>
+            <p>#6B8E23</p>
+          </div>
+          <div class="col-sm">
+            <h5>Orange</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #ffa500"></div>
+            <p>#FFA500</p>
+          </div>
+          <div class="col-sm">
+            <h5>Orange Red</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #ff4500"></div>
+            <p>#FF4500</p>
+          </div>
+          <div class="col-sm">
+            <h5>Orchid</h5>
+            <div class="mx-auto d-block" style="width: 100px; height: 100px; background-color: #da70d6"></div>
+            <p>#DA70D6</p>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br />
+
+      <!-- ========================================================================= -->
+      <!-- artikel -->
+      <div id="about" style="height: 50px"></div>
+      <div class="container content">
+        <h2 class="text-center"><b>Apa Itu HEXA?</b></h2>
+        <br /><br />
+        <div style="width: 610px" class="mx-auto d-block"><img src="img/3.jpeg" alt="" /></div>
+        <br /><br />
+        <p>
+          <span style="font-weight: 400">Dilansir dari Shutterstock, HEX adalah cara merepresentasikan warna dari berbagai model warna melalui nilai hexadecimal.</span>
+        </p>
+        <p>
+          <span style="font-weight: 400">Sebuah warna hexadecimal mengikuti format #RRGGBB di mana RR adalah </span><i><span style="font-weight: 400">red</span></i
+          ><span style="font-weight: 400"> atau merah, GG adalah </span><i><span style="font-weight: 400">green</span></i
+          ><span style="font-weight: 400"> atau hijau, dan BB adalah </span><i><span style="font-weight: 400">blue</span></i
+          ><span style="font-weight: 400"> atau biru.</span>
+        </p>
+        <p><span style="font-weight: 400">Format tersebut juga bisa diikuti oleh angka dalam kisaran 00 hingga FF untuk menentukan intensitas warna.</span></p>
+        <p><span style="font-weight: 400">Contohnya adalah #FF0000 yang merupakan warna merah murni karena komponen warna merah memiliki nilai maksimal FF. </span></p>
+        <p><span style="font-weight: 400">Sementara itu, komponen warna hijau dan biru memiliki nilai terendah yaitu 00.</span></p>
+        <p><span style="font-weight: 400">Contoh lainnya adalah warna putih yang dibuat dengan mencampurkan ketiga warna primer dengan intensitas penuh. Hal tersebut menghasilkan kode warna HEX berupa #FFFFFF.</span></p>
+        <p>
+          <span style="font-weight: 400"
+            >Begitu juga dengan sebaliknya, jika ingin memberikan warna hitam maka perlu memberikan intensitas serendah mungkin pada setiap warna primer. Jadi, kode HEX warna hitam adalah #000000.&nbsp;&nbsp;</span
+          >
+        </p>
+        <p><span style="font-weight: 400">Jadi, sederhananya, HEX adalah kombinasi enam digit angka warna RGB yang memiliki kombinasi yang sangat banyak hingga mencapai 16.777.216 warna yang berbeda.</span></p>
+        <br /><br />
+        <h2 id="anchor_1" class="text-center"><b>Penggunaan HEXA</b></h2>
+        <br /><br />
+        <div style="width: 610px" class="mx-auto d-block">
+          <img src="img/2.jpeg" alt="" />
+        </div>
+        <br /><br />
+        <p>
+          <span style="font-weight: 400">Kombinasi kode HEX warna lebih sering dimanfaatkan oleh </span><i><span style="font-weight: 400">website</span></i> <i><span style="font-weight: 400">developer</span></i
+          ><span style="font-weight: 400"> untuk mendesain sebuah </span><i><span style="font-weight: 400">website</span></i
+          ><span style="font-weight: 400">.</span>
+        </p>
+        <p>
+          <span style="font-weight: 400">Menggunakan kombinasi warna HEX akan lebih memudahkan mereka dalam menentukan warna untuk desain </span><i><span style="font-weight: 400">website</span></i
+          ><span style="font-weight: 400">-nya.</span>
+        </p>
+        <p>
+          <span style="font-weight: 400">Dari tiga warna dasar </span><span style="font-weight: 400">RGB</span></a
+          ><span style="font-weight: 400"> bisa diubah menjadi beberapa warna berbeda yang bisa dimanfaatkan untuk mempercantik desain </span><i><span style="font-weight: 400">website</span></i
+          ><span style="font-weight: 400">.</span>
+        </p>
+        <p><span style="font-weight: 400">Hal itu dilakukan dengan mencampurkan intensitas tertinggi dari warna yang diinginkan dengan intensitas terendah dari dua warna lainnya.</span></p>
+        <p><span style="font-weight: 400">Salah satu kelebihan dari HEX adalah memiliki banyak kombinasi warna yang berbeda. Jadi, desainer bisa membuat kombinasi warna sesuai preferensinya.</span></p>
+        <p><span style="font-weight: 400">Bahkan, seringnya warna-warna tersebut tidak diketahui namanya, tapi tetap bisa diproduksi dengan menemukan kode HEX-nya.</span></p>
+        <p>
+          <span style="font-weight: 400">Menurut </span><a href="https://htmlcolorcodes.com/" target="_blank" rel="noopener"><span style="font-weight: 400">HTML Color Codes</span></a
+          ><span style="font-weight: 400"> dengan memahami dasar-dasar kode HEX warna, maka akan lebih mudah membuat rentang warna dari putih hingga hitam.</span>
+        </p>
+        <p>
+          <span style="font-weight: 400">Jadi, jika ingin membuat </span><i><span style="font-weight: 400">website</span></i
+          ><span style="font-weight: 400"> dengan tema monokrom tentu saja akan lebih mudah untuk mencari kombinasinya dengan menggunakan kode warna HEX.</span>
+        </p>
+        <br /><br />
+        <h2 id="anchor_2" class="text-center"><b>Kelebihan dan Kekurangan</b></h2>
+        <br /><br />
+        <div id="attachment_66059" style="width: 610px" class="mx-auto d-block">
+          <img src="img/1.jpeg" alt="" />
+        </div>
+        <br /><br />
+        <p><span style="font-weight: 400">Setelah mengetahui pengertian dan kegunaannya di atas, kini cari tahu dulu apa saja kelebihan dan kekurangannya.</span></p>
+        <p>
+          <span style="font-weight: 400">Dikutip dari </span><a href="http://thenewcode.com/1108/Using-Hexadecimal-Colors-in-CSS" target="_blank" rel="noopener"><span style="font-weight: 400">The New Code</span></a
+          ><span style="font-weight: 400">, inilah beberapa kelebihan dan kekurangan dari HEX di antaranya adalah:</span>
+        </p>
+        <div class="ended">
+          <h3><b>Kelebihan</b></h3>
+          <ul>
+            <li><span style="font-weight: 400">Menggunakan warna primer yang sederhana seperti merah, hitam, dan putih sehingga cepat untuk ditulis.</span></li>
+            <li>
+              <span style="font-weight: 400">Kode warna HEX sudah dipahami oleh hampir setiap </span><i><span style="font-weight: 400">browser </span></i><span style="font-weight: 400">sehingga warna yang muncul akan lebih menarik.</span>
+            </li>
+          </ul>
+          <h3><b>Kekurangan</b></h3>
+          <ul>
+            <li>
+              <span style="font-weight: 400"
+                >HEX sulit disesuaikan secara akurat sehingga biasanya membutuhkan penggunaan aplikasi pihak ketiga untuk mendapatkan kodenya yang tepat. oleh karena itu kami sudah menyediakan aplikasi untuk membantu anda mecari nilai hexa
+                klik <a href="#home">disini</a></span
+              >
+            </li>
+            <li><span style="font-weight: 400">Kode warna HEX yang sangat banyak sering membuat desainer merasa kesulitan untuk menemukan warna yang sesuai.</span></li>
+          </ul>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br />
+    </div>
+    <!-- ========================================================================= -->
+    <!-- footer -->
+    <footer>
+      <div class="footer text-center">
+        <div class="row">
+          <div class="col-sm-12">
+            <p>&copy; copyright 2021 | by Faisal Rahmatdani</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ========================================================================= -->
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var redValEl = document.getElementById("redValEl");
+      var greenValEl = document.getElementById("greenValEl");
+      var blueValEl = document.getElementById("blueValEl");
+      var hexaValue = document.getElementById("hexaValue");
+
+      var rgb = document.getElementById("rgb");
+      var hex = document.getElementById("hex");
+
+      function convert() {
+        var red = redValEl.value;
+        var green = greenValEl.value;
+        var blue = blueValEl.value;
+
+        var hexaColorCode = "#" + getHexa(red) + getHexa(green) + getHexa(blue);
+        hexaValue.value = hexaColorCode;
+
+        rgb.style.background = `rgb(${red}, ${green}, ${blue})`;
+        hex.style.background = hexaColorCode;
+      }
+
+      function getHexa(value) {
+        var hexa = parseInt(value).toString(16);
+        return hexa.length == 1 ? "0" + hexa : hexa;
+      }
+    </script>
+  </body>
+</html>
